@@ -7,7 +7,7 @@ import VideoSection from '@/components/landing/VideoSection/VideoSection.vue';
 <template>
 
     <div class="flex flex-col">
-        <Header class="fixed top-0 text-white z-20 w-full backdrop-filter backdrop-blur-md bg-black/70" />
+        <Header class="fixed top-0 text-white z-20 w-full" />
         <VideoSection class="h-screen" />
         <div class="h-screen">
             some other section
