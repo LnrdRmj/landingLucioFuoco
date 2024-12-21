@@ -6,7 +6,7 @@ import LogoOrange from '@/components/icons/LogoOrange.vue';
     <div class="flex flex-col px-8 py-32 bg-neutral-900 text-white ">
         <div class="flex">
             <div class="flex flex-col flex-1 min-w-0 font-Staatliches">
-                <div class="text-7xl text-orange-700">VENEZIA-GIULIA</div>
+                <div class="text-7xl text-orange-dark">VENEZIA-GIULIA</div>
                 <div class="text-xl text-stone-700">RUTTARS, DOLEGNA DEL COLLIO (GO)</div>
             </div>
             <LogoOrange class="h-16 mx-5" />
@@ -27,7 +27,7 @@ import LogoOrange from '@/components/icons/LogoOrange.vue';
                 mai spento.
             </p>
             <br>
-            <p class="text-orange-500">
+            <p class="text-orange-light">
                 Il Vin al Cjante,<br>
                 ma sot il Cjânt e Zûf il Mâl.
             </p>
