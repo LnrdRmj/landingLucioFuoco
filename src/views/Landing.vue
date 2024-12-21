@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from '@/components/header/Header.vue';
 import CompanyBackground from '@/components/landing/companyBackground/CompanyBackground.vue';
+import Contacts from '@/components/landing/contacts/Contacts.vue';
 import VideoSection from '@/components/landing/VideoSection/VideoSection.vue';
 import WhereToFindUs from '@/components/landing/whereToFindUs/WhereToFindUs.vue';
 
@@ -13,6 +14,7 @@ import WhereToFindUs from '@/components/landing/whereToFindUs/WhereToFindUs.vue'
         <VideoSection class="h-screen" />
         <CompanyBackground />
         <WhereToFindUs />
+        <Contacts />
         <div class="h-screen">
         </div>
     </div>

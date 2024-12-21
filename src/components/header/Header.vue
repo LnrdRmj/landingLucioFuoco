@@ -11,7 +11,7 @@ const open = ref(false)
 </script>
 
 <template>
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col h-screen" :class="{ 'pointer-events-none': !open }">
         <header class="flex px-10 justify-between transition-[padding] backdrop-filter backdrop-blur-md"
             :class="open == true ? 'py-10 bg-black' : 'py-6 bg-black/70'">
             <div class="flex [&>*]:h-10 gap-5">
@@ -21,7 +21,7 @@ const open = ref(false)
                     <FuocoIcon />
                 </div>
             </div>
-            <button class="size-10 [&>*]:duration-200 relative" @click="open = !open">
+            <button class="size-10 [&>*]:duration-200 relative pointer-events-auto" @click="open = !open">
                 <Transition name="fade">
                     <MenuBurgerIcon v-if="!open" class="fill-white absolute size-full top-0" />
                     <TimesIcon v-else class="fill-white" />
