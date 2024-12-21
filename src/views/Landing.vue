@@ -15,8 +15,6 @@ import WhereToFindUs from '@/components/landing/whereToFindUs/WhereToFindUs.vue'
         <CompanyBackground />
         <WhereToFindUs />
         <Contacts />
-        <div class="h-screen">
-        </div>
     </div>
 
 </template>
