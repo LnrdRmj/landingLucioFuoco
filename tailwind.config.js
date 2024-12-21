@@ -4,7 +4,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                app: ['Montserrat']
+                app: ['Prociono'],
+                Staatliches: ['Staatliches'],
+                Prociono: ['Prociono'],
             }
         },
     },
