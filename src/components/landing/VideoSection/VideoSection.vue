@@ -30,6 +30,6 @@ defineExpose({ root })
                 </button>
             </div>
         </div>
-        <video :src="LandingVideo" muted loop class="size-full object-cover absolute top-0 z-0"></video>
+        <video :src="LandingVideo" muted autoplay loop class="size-full object-cover absolute top-0 z-0"></video>
     </div>
 </template>

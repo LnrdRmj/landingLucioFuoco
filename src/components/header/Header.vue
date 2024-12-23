@@ -5,7 +5,6 @@ import Logo from '../icons/Logo.vue';
 import LucioIcon from '../icons/LucioIcon.vue';
 import MenuBurgerIcon from '../icons/MenuBurgerIcon.vue';
 import TimesIcon from '../icons/TimesIcon.vue';
-import TailwindBreakpoints from '../dev/tailwindBreakpoints.vue/TailwindBreakpoints.vue';
 
 const props = defineProps<{
     routes: { title: string; onClick: () => void }[],
@@ -18,7 +17,6 @@ const open = ref(false)
 
 <template>
     <div class="flex flex-col h-screen pointer-events-none">
-        <TailwindBreakpoints class="absolute top-0 left-0 text-white z-50" />
         <header
             class="flex px-10 lg:px-32 justify-between transition-[padding,background-color] backdrop-filter backdrop-blur-md pointer-events-auto"
             :class="[open == true ? 'py-10 bg-black' : 'py-6 bg-black/70', halfVideoIsVisible ? 'lg:py-12 lg:bg-transparent lg:backdrop-blur-0' : 'backdrop-blur-md']">
