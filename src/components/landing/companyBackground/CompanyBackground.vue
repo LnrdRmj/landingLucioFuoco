@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import LogoOrange from '@/components/icons/LogoOrange.vue';
+import { useTemplateRef } from 'vue';
+
+const emits = defineEmits(['discoverProduct'])
+
+const root = useTemplateRef('root')
+defineExpose({ root })
 </script>
 
 <template>
-    <div class="flex flex-col px-8 py-32 bg-neutral-900 text-white ">
+    <div class="flex flex-col px-8 py-32 bg-neutral-900 text-white" ref="root">
         <div class="flex">
             <div class="flex flex-col flex-1 min-w-0 font-Staatliches">
                 <div class="text-7xl text-orange-dark">VENEZIA-GIULIA</div>
@@ -32,7 +38,8 @@ import LogoOrange from '@/components/icons/LogoOrange.vue';
                 ma sot il Cjânt e Zûf il Mâl.
             </p>
         </div>
-        <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-16 font-Prociono">
+        <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-16 font-Prociono"
+            @click="emits('discoverProduct')">
             Scopri il prodotto
         </button>
     </div>

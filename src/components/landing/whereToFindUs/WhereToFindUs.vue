@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import LinkIcon from '@/components/icons/LinkIcon.vue';
 import LateralLogo from './LateralLogo.vue';
+import { useTemplateRef } from 'vue';
 
 const locations = [
     'Locanda alle Vigne, Cormons (GO)',
     'Osteria agli Antenati, San Lorenzo Isontino (GO)'
 ]
 
+const root = useTemplateRef('root')
+defineExpose({ root })
+
 </script>
 
 <template>
-    <div class="bg-orange-dark flex-center flex-col h-[500px] relative">
+    <div class="bg-orange-dark flex-center flex-col h-[500px] relative" ref="root">
         <div class="absolute size-full py-10 flex justify-between">
             <LateralLogo class="h-full -scale-x-100" />
             <LateralLogo class="h-full" />

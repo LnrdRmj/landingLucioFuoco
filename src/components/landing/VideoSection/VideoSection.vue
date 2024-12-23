@@ -5,6 +5,8 @@ import LandingVideo from '../../../assets/landing-video.mp4'
 import LucioIcon from '@/components/icons/LucioIcon.vue';
 import FuocoIcon from '@/components/icons/FuocoIcon.vue';
 
+const emits = defineEmits(['discoverProduct'])
+
 </script>
 
 <template>
@@ -19,7 +21,8 @@ import FuocoIcon from '@/components/icons/FuocoIcon.vue';
                 <div class="text-sm mt-2">
                     Il Vin al Cjante, ma sot il Cjânt e Zûf il Mâl.
                 </div>
-                <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-10">
+                <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-10"
+                    @click="emits('discoverProduct')">
                     Scopri il prodotto
                 </button>
             </div>

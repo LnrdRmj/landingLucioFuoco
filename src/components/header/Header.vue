@@ -6,6 +6,10 @@ import LucioIcon from '../icons/LucioIcon.vue';
 import MenuBurgerIcon from '../icons/MenuBurgerIcon.vue';
 import TimesIcon from '../icons/TimesIcon.vue';
 
+const props = defineProps<{
+    routes: { title: string; onClick: () => void }[]
+}>()
+
 const open = ref(false)
 
 </script>
@@ -31,7 +35,7 @@ const open = ref(false)
         <div class="flex-1 min-h-0">
             <div class="grid grid-rows-[0fr] transition-[grid-template-rows] h-full"
                 :class="{ 'grid-rows-[1fr]': open }">
-                <div class="pointer-events-none
+                <div class="
                     bg-black
                     lg:hidden
                     overflow-hidden
@@ -39,13 +43,13 @@ const open = ref(false)
                     flex flex-col 
                     w-full md:h-fit
                     z-10
-                    transition-[opacity,transform] duration-[250ms]" :class="open ? 'opacity-100' : 'opacity-0'">
+                    transition-[opacity,transform] duration-[250ms]"
+                    :class="open ? 'opacity-100' : 'opacity-0 pointer-events-none'">
                     <div class="flex flex-center flex-col pb-12 px-8 h-full">
                         <div class="w-full bg-gray-400 h-[1px]"></div>
                         <div class="flex flex-col items-center justify-center h-full text-4xl gap-10 font-app">
-                            <div>Territorio</div>
-                            <div>Luoghi</div>
-                            <div>Contatti</div>
+                            <button v-for="route of routes" @click="open = false; route.onClick()">{{ route.title
+                                }}</button>
                         </div>
                         <!-- <button v-for="route of routes" @click="route.onClick(); open = false" class="z-20
                                 px-2 py-1 h-fit
