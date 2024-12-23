@@ -8,7 +8,8 @@ import TimesIcon from '../icons/TimesIcon.vue';
 import TailwindBreakpoints from '../dev/tailwindBreakpoints.vue/TailwindBreakpoints.vue';
 
 const props = defineProps<{
-    routes: { title: string; onClick: () => void }[]
+    routes: { title: string; onClick: () => void }[],
+    halfVideoIsVisible: boolean
 }>()
 
 const open = ref(false)
@@ -16,10 +17,11 @@ const open = ref(false)
 </script>
 
 <template>
-    <div class="flex flex-col h-screen" :class="{ 'pointer-events-none': !open }">
+    <div class="flex flex-col h-screen pointer-events-none">
         <TailwindBreakpoints class="absolute top-0 left-0 text-white z-50" />
-        <header class="flex px-10 justify-between transition-[padding] backdrop-filter backdrop-blur-md"
-            :class="open == true ? 'py-10 bg-black' : 'py-6 bg-black/70'">
+        <header
+            class="flex px-10 lg:px-32 justify-between transition-[padding,background-color] backdrop-filter backdrop-blur-md pointer-events-auto"
+            :class="[open == true ? 'py-10 bg-black' : 'py-6 bg-black/70', halfVideoIsVisible ? 'lg:py-12 lg:bg-transparent lg:backdrop-blur-0' : 'backdrop-blur-md']">
             <div class="flex [&>*]:h-10 gap-5">
                 <Logo />
                 <div class="flex">
@@ -27,14 +29,22 @@ const open = ref(false)
                     <FuocoIcon />
                 </div>
             </div>
-            <button class="size-10 [&>*]:duration-200 relative pointer-events-auto" @click="open = !open">
-                <Transition name="fade">
-                    <MenuBurgerIcon v-if="!open" class="fill-white absolute size-full top-0" />
-                    <TimesIcon v-else class="fill-white" />
-                </Transition>
-            </button>
+            <div class="flex">
+                <div class="hidden lg:flex lg:gap-32">
+                    <button v-for="route of routes" @click="route.onClick()"
+                        class="text-xl hover:text-orange-light transition-colors">
+                        {{ route.title }}
+                    </button>
+                </div>
+                <button class="lg:hidden size-10 [&>*]:duration-200 relative pointer-events-auto" @click="open = !open">
+                    <Transition name="fade">
+                        <MenuBurgerIcon v-if="!open" class="fill-white absolute size-full top-0" />
+                        <TimesIcon v-else class="fill-white" />
+                    </Transition>
+                </button>
+            </div>
         </header>
-        <div class="flex-1 min-h-0">
+        <div class="flex-1 min-h-0" :class="{ 'pointer-events-none': !open }">
             <div class="grid grid-rows-[0fr] transition-[grid-template-rows] h-full"
                 :class="{ 'grid-rows-[1fr]': open }">
                 <div class="
@@ -43,15 +53,15 @@ const open = ref(false)
                     overflow-hidden
                     text-white
                     flex flex-col 
-                    w-full md:h-fit
+                    w-full
                     z-10
-                    transition-[opacity,transform] duration-[250ms]"
-                    :class="open ? 'opacity-100' : 'opacity-0 pointer-events-none'">
+                    transition-[opacity,transform] duration-[250ms]" :class="open ? 'opacity-100' : 'opacity-0'">
                     <div class="flex flex-center flex-col pb-12 px-8 h-full">
                         <div class="w-full bg-gray-400 h-[1px]"></div>
                         <div class="flex flex-col items-center justify-center h-full text-4xl gap-10 font-app">
-                            <button v-for="route of routes" @click="open = false; route.onClick()">{{ route.title
-                                }}</button>
+                            <button v-for="route of routes" @click="open = false; route.onClick()">
+                                {{ route.title }}
+                            </button>
                         </div>
                         <!-- <button v-for="route of routes" @click="route.onClick(); open = false" class="z-20
                                 px-2 py-1 h-fit

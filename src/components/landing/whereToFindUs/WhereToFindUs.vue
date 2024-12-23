@@ -15,10 +15,6 @@ defineExpose({ root })
 
 <template>
     <div class="bg-orange-dark flex-center flex-col h-[500px] relative" ref="root">
-        <div class="absolute size-full py-10 flex justify-between">
-            <LateralLogo class="h-full -scale-x-100" />
-            <LateralLogo class="h-full" />
-        </div>
         <div class="font-Staatliches text-5xl lg:text-8xl text-center">
             DOVE <br class="lg:hidden"> TROVARCI
         </div>
@@ -27,6 +23,10 @@ defineExpose({ root })
                 <LinkIcon class="h-3" />
                 <div>{{ location }}</div>
             </div>
+        </div>
+        <div class="absolute size-full py-10 flex justify-between pointer-events-none">
+            <LateralLogo class="h-full -scale-x-100" />
+            <LateralLogo class="h-full" />
         </div>
     </div>
 </template>

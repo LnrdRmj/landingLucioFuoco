@@ -1,16 +1,19 @@
 <script setup lang="ts">
 
-import Logo from '@/components/icons/Logo.vue';
-import LandingVideo from '../../../assets/landing-video.mp4'
-import LucioIcon from '@/components/icons/LucioIcon.vue';
 import FuocoIcon from '@/components/icons/FuocoIcon.vue';
+import Logo from '@/components/icons/Logo.vue';
+import LucioIcon from '@/components/icons/LucioIcon.vue';
+import { useTemplateRef } from 'vue';
+import LandingVideo from '../../../assets/landing-video.mp4';
 
 const emits = defineEmits(['discoverProduct'])
 
+const root = useTemplateRef('root')
+defineExpose({ root })
 </script>
 
 <template>
-    <div class="relative">
+    <div class="relative" ref="root">
         <div class="size-full flex flex-center z-10 relative text-white">
             <div class="flex flex-col items-center">
                 <div class="flex gap-3 [&>*]:h-14 lg:[&>*]:h-24">
