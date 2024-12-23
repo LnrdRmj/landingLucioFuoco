@@ -2,6 +2,7 @@
 import Header from '@/components/header/Header.vue';
 import CompanyBackground from '@/components/landing/companyBackground/CompanyBackground.vue';
 import Contacts from '@/components/landing/contacts/Contacts.vue';
+import Footer from '@/components/landing/footer/Footer.vue';
 import VideoSection from '@/components/landing/VideoSection/VideoSection.vue';
 import WhereToFindUs from '@/components/landing/whereToFindUs/WhereToFindUs.vue';
 
@@ -15,6 +16,7 @@ import WhereToFindUs from '@/components/landing/whereToFindUs/WhereToFindUs.vue'
         <CompanyBackground />
         <WhereToFindUs />
         <Contacts />
+        <Footer />
     </div>
 
 </template>

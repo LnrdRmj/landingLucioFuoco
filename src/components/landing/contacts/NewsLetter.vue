@@ -4,7 +4,7 @@ import LogoOrange from '@/components/icons/LogoOrange.vue';
 import { ref } from 'vue';
 import { computed } from 'vue';
 
-const email = ref('marcoalbero7@gmail.com')
+const email = ref('')
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const isEmailValid = computed(() => emailPattern.test(email.value));
 

@@ -4,7 +4,7 @@ import NewsLetter from './NewsLetter.vue';
 </script>
 
 <template>
-    <div class="flex flex-col bg-black text-white px-10 py-28">
+    <div class="flex flex-col bg-neutral-900 text-white px-10 py-28">
         <div class="flex-center text-6xl font-Staatliches text-orange-dark">
             CONTATTI
         </div>
