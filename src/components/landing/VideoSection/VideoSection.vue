@@ -24,7 +24,8 @@ defineExpose({ root })
                 <div class="text-sm lg:text-2xl mt-2">
                     Il Vin al Cjante, ma sot il Cjânt e Zûf il Mâl.
                 </div>
-                <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-10"
+                <button
+                    class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-10 transition-all hover:bg-white hover:text-black"
                     @click="emits('discoverProduct')">
                     Scopri il prodotto
                 </button>

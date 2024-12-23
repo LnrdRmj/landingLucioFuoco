@@ -38,7 +38,8 @@ defineExpose({ root })
                 ma sot il Cjânt e Zûf il Mâl.
             </p>
         </div>
-        <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-16 font-Prociono"
+        <button
+            class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-16 font-Prociono transition-all hover:bg-white hover:text-black"
             @click="emits('discoverProduct')">
             Scopri il prodotto
         </button>

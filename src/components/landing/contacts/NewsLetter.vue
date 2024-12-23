@@ -21,8 +21,8 @@ const isEmailValid = computed(() => emailPattern.test(email.value));
         </div>
         <div class="flex overflow-hidden rounded-md  mt-7 transition-colors"
             :class="[isEmailValid ? 'bg-white' : 'bg-zinc-800']">
-            <input type="email" placeholder="Inserisci Email" v-model="email"
-                class="h-10 placeholder:text-neutral-700 px-2 flex-1 transition-colors bg-transparent outline-none"
+            <input type="email" placeholder="Inserisci Email" v-model="email" class="h-10  px-2 flex-1 transition-all bg-transparent outline-none 
+                    placeholder:transition-colors placeholder-neutral-700 hover:placeholder-white"
                 :class="[isEmailValid ? 'text-black' : 'text-white']" />
             <div class="flex-center w-10">
                 <Transition name="to-from-right">
