@@ -9,15 +9,15 @@ defineExpose({ root })
 </script>
 
 <template>
-    <div class="flex flex-col px-8 py-32 bg-neutral-900 text-white" ref="root">
+    <div class="flex flex-col px-10 lg:px-32 py-32 bg-neutral-900 text-white" ref="root">
         <div class="flex">
             <div class="flex flex-col flex-1 min-w-0 font-Staatliches">
                 <div class="text-7xl text-orange-dark">VENEZIA-GIULIA</div>
                 <div class="text-xl text-stone-700">RUTTARS, DOLEGNA DEL COLLIO (GO)</div>
             </div>
-            <LogoOrange class="h-16 mx-5" />
+            <LogoOrange class="h-16 lg:h-32 mx-5" />
         </div>
-        <div class="mt-10">
+        <div class="mt-10 lg:text-xl">
             <p>
                 Luciofuoco nasce nel cuore della Venezia-Giulia, tra i venti gelidi che attraversano i pendii e il
                 terreno aspro delle montagne.
@@ -34,7 +34,7 @@ defineExpose({ root })
             </p>
             <br>
             <p class="text-orange-light">
-                Il Vin al Cjante,<br>
+                Il Vin al Cjante,<br class="lg:hidden">
                 ma sot il Cjânt e Zûf il Mâl.
             </p>
         </div>

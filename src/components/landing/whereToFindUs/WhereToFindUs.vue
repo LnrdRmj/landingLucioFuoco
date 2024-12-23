@@ -19,8 +19,8 @@ defineExpose({ root })
             <LateralLogo class="h-full -scale-x-100" />
             <LateralLogo class="h-full" />
         </div>
-        <div class="font-Staatliches text-5xl text-center">
-            DOVE <br> TROVARCI
+        <div class="font-Staatliches text-5xl lg:text-8xl text-center">
+            DOVE <br class="lg:hidden"> TROVARCI
         </div>
         <div class="flex flex-col items-center mt-10 gap-1">
             <div v-for="location of locations" class="flex items-center text-white gap-2">

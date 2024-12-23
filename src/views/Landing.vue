@@ -25,7 +25,7 @@ const headerRoutes = [
 </script>
 
 <template>
-    <div class="flex flex-col">
+    <div class="flex flex-col relative">
         <Header class="fixed top-0 text-white z-20 w-full" :routes="headerRoutes" />
         <VideoSection class="h-screen" @discoverProduct="tmp" />
         <CompanyBackground @discoverProduct="tmp" ref="companyBackground" />

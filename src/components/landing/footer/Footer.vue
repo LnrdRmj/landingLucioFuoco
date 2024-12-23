@@ -13,7 +13,7 @@ import LucioIcon from '@/components/icons/LucioIcon.vue';
                 <FuocoIcon />
             </div>
         </div>
-        <div class="flex flex-col text-white gap-5 mt-10">
+        <div class="flex flex-col lg:flex-row lg:gap-32 text-white gap-5 mt-10">
             <div class="flex flex-col">
                 <div class="text-neutral-700">Indirizzo</div>
                 <div class="mt-2">

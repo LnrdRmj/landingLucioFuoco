@@ -9,11 +9,11 @@ defineExpose({ root })
 </script>
 
 <template>
-    <div class="flex flex-col bg-neutral-900 text-white px-10 py-28" ref="root">
+    <div class="flex flex-col bg-neutral-900 text-white px-10 py-28 lg:items-center" ref="root">
         <div class="flex-center text-6xl font-Staatliches text-orange-dark">
             CONTATTI
         </div>
-        <div class="text-center mt-10">
+        <div class="text-center mt-10 lg:text-xl lg:w-[1000px]">
             Luciofuoco non è solo un vino, ma un’esperienza che desideriamo condividere con chi sa apprezzarne
             l’unicità.
             Per scoprire di più sul prodotto e sulle modalità di acquisto, puoi metterti in contatto diretto con noi.
@@ -22,6 +22,6 @@ defineExpose({ root })
             <CopyIcon class="fill-orange-light h-3" />
             <a href="mailto:info@luciofuoco.it" class="text-orange-light">info@luciofuoco.it</a>
         </div>
-        <NewsLetter class="mt-16" />
+        <NewsLetter class="mt-16 lg:w-[400px]" />
     </div>
 </template>

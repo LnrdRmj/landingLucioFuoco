@@ -13,12 +13,12 @@ const emits = defineEmits(['discoverProduct'])
     <div class="relative">
         <div class="size-full flex flex-center z-10 relative text-white">
             <div class="flex flex-col items-center">
-                <div class="flex gap-3 [&>*]:h-14">
+                <div class="flex gap-3 [&>*]:h-14 lg:[&>*]:h-24">
                     <LucioIcon />
                     <Logo />
                     <FuocoIcon />
                 </div>
-                <div class="text-sm mt-2">
+                <div class="text-sm lg:text-2xl mt-2">
                     Il Vin al Cjante, ma sot il Cjânt e Zûf il Mâl.
                 </div>
                 <button class="border border-white rounded-lg py-2 font-normal text-2xl w-60 mt-10"
