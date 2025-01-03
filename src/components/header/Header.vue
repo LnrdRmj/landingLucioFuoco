@@ -16,7 +16,7 @@ const open = ref(false)
 </script>
 
 <template>
-    <div class="flex flex-col h-screen pointer-events-none">
+    <div class="flex flex-col h-screen" :class="{ 'pointer-events-none': !open }">
         <header
             class="flex px-10 lg:px-32 justify-between transition-[padding,background-color] backdrop-filter backdrop-blur-md pointer-events-auto"
             :class="[open == true ? 'py-10 bg-black' : 'py-6 bg-black/70', halfVideoIsVisible ? 'lg:py-12 lg:bg-transparent lg:backdrop-blur-0' : 'backdrop-blur-md']">
@@ -61,12 +61,6 @@ const open = ref(false)
                                 {{ route.title }}
                             </button>
                         </div>
-                        <!-- <button v-for="route of routes" @click="route.onClick(); open = false" class="z-20
-                                px-2 py-1 h-fit
-                                font-semibold
-                                animated-background-button">
-                                {{ route.title }}
-                            </button> -->
                     </div>
                 </div>
             </div>
