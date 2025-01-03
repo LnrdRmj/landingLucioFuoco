@@ -37,7 +37,6 @@ const { stop } = watch(videoSection, () => {
     stop()
 })
 
-
 </script>
 
 <template>
