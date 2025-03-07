@@ -19,8 +19,8 @@ function tmp() {
 }
 
 const headerRoutes = [
-    { title: 'Territorio', onClick: () => companyBackground.value?.root?.scrollIntoView({ behavior: 'smooth' }) },
-    { title: 'Luoghi', onClick: () => whereToFindUs.value?.root?.scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Scopri', onClick: () => companyBackground.value?.root?.scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Gusta', onClick: () => whereToFindUs.value?.root?.scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Contatti', onClick: () => contacts.value?.root?.scrollIntoView({ behavior: 'smooth' }) },
 ]
 
