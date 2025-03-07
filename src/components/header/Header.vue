@@ -16,7 +16,7 @@ const open = ref(false)
 </script>
 
 <template>
-    <div class="flex flex-col h-screen" :class="{ 'pointer-events-none': !open }">
+    <div class="flex flex-col h-dvh" :class="{ 'pointer-events-none': !open }" @touchmove.prevent>
         <header
             class="flex px-10 lg:px-32 justify-between transition-[padding,background-color] backdrop-filter backdrop-blur-md pointer-events-auto"
             :class="[open == true ? 'py-10 bg-black' : 'py-6 bg-black/70', halfVideoIsVisible ? 'lg:py-12 lg:bg-transparent lg:backdrop-blur-0' : 'backdrop-blur-md']">
