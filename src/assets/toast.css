@@ -1,0 +1,26 @@
+@keyframes slideDownUp {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    /* Start above */
+    30% {
+        transform: translateY(0);
+    }
+
+    /* Slide down */
+    70% {
+        transform: translateY(0);
+    }
+
+    /* Stay in place */
+    100% {
+        transform: translateY(-100%);
+    }
+
+    /* Slide back up */
+}
+
+.toast-animation {
+    animation: slideDownUp 2s ease-in-out forwards;
+}

@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './toast.css';
 
 @tailwind base;
 @tailwind components;
