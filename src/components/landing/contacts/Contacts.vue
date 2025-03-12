@@ -2,9 +2,20 @@
 import CopyIcon from '@/components/icons/CopyIcon.vue';
 import NewsLetter from './NewsLetter.vue';
 import { useTemplateRef } from 'vue';
+import { toastContainerId } from '@/services/toast/toast';
+import { appConfig } from '@/services/app/app';
 
 const root = useTemplateRef('root')
 defineExpose({ root })
+
+const emailCopiedContainer = useTemplateRef('email-copied-container')
+function emailClicked() {
+    navigator.clipboard.writeText(appConfig.email).then(text => {
+        emailCopiedContainer.value?.classList.remove("toast-animation");
+        void emailCopiedContainer.value?.offsetWidth;
+        emailCopiedContainer.value?.classList.add("toast-animation");
+    });
+}
 
 </script>
 
@@ -18,10 +29,16 @@ defineExpose({ root })
             l’unicità.
             Per scoprire di più sul prodotto e sulle modalità di acquisto, puoi metterti in contatto diretto con noi.
         </div>
-        <div class="flex items-center justify-center gap-2 mt-8">
+        <div class="flex-center gap-2 mt-8 cursor-pointer" @click="emailClicked()">
             <CopyIcon class="fill-orange-light h-3" />
-            <a href="mailto:info@luciofuoco.it" class="text-orange-light">info@luciofuoco.it</a>
+            <div class="text-orange-light">{{ appConfig.email }}</div>
         </div>
+        <Teleport :to="`#${toastContainerId}`">
+            <div class="w-full h-10 flex-center bg-white text-black uppercase -translate-y-full"
+                ref="email-copied-container">
+                mail copiata
+            </div>
+        </Teleport>
         <NewsLetter class="mt-16 lg:w-[400px]" />
     </div>
 </template>
