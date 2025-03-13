@@ -1,4 +1,4 @@
-import { collection, doc, setDoc } from 'firebase/firestore'
+import { collection, doc, getDocs, query, setDoc } from 'firebase/firestore'
 import { firestore } from '../../firebase'
 
 const emailCollection = collection(firestore, 'emails')
@@ -8,4 +8,8 @@ export function addEmail(email: string) {
     return setDoc(emailDoc, {
         email,
     })
+}
+
+export function getEmails() {
+    return getDocs(emailCollection)
 }
