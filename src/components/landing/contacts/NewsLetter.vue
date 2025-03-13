@@ -52,7 +52,8 @@ async function registerEmail() {
                 :disabled="isRegisteringEmail" :class="[isEmailValid ? 'text-black' : 'text-white']" />
             <div class="flex-center w-10">
                 <Transition name="to-from-right">
-                    <button v-if="isEmailValid" :disabled="!isEmailValid || isRegisteringEmail" @click="registerEmail"
+                    <button v-if="isEmailValid"
+                        :disabled="!isEmailValid || isRegisteringEmail || successEmailRegistered" @click="registerEmail"
                         class="text-white px-3 bg-orange-dark size-full !duration-200">
                         <ArrowIcon class="fill-transparent size-full stroke-white" />
                     </button>
