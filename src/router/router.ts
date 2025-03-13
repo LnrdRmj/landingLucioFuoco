@@ -1,4 +1,7 @@
+import { firebaseAuth } from '@/services/firebase/firebase'
+import Admin from '@/views/admin/Admin.vue'
 import Landing from '@/views/Landing.vue'
+import Login from '@/views/Login.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -8,6 +11,25 @@ const router = createRouter({
             path: '/',
             name: 'home',
             component: Landing,
+        },
+        {
+            path: '/cuisine',
+            name: 'login',
+            component: Login,
+        },
+        {
+            path: '/adcuisine',
+            name: 'admin',
+            component: Admin,
+            beforeEnter: async (to, from) => {
+                await firebaseAuth.authStateReady()
+                console.log(firebaseAuth.currentUser)
+                if (firebaseAuth.currentUser == null) {
+                    return {
+                        name: 'home',
+                    }
+                }
+            },
         },
     ],
 })
