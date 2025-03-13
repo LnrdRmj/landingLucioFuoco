@@ -7,7 +7,11 @@ import { toastContainerId } from './services/toast/toast';
     <div class="size-full font-app">
         <div :id="toastContainerId" class="fixed w-full top-0 left-0 z-50"></div>
         <div class="size-full relative">
-            <RouterView class="size-full" />
+            <RouterView v-slot="{ Component }">
+                <Transition name="fade" mode="out-in">
+                    <component :is="Component" class="size-full" />
+                </Transition>
+            </RouterView>
         </div>
     </div>
 </template>
