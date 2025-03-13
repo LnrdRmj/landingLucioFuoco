@@ -23,7 +23,6 @@ const router = createRouter({
             component: Admin,
             beforeEnter: async (to, from) => {
                 await firebaseAuth.authStateReady()
-                console.log(firebaseAuth.currentUser)
                 if (firebaseAuth.currentUser == null) {
                     return {
                         name: 'home',
