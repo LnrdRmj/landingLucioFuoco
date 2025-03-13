@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+html,
+#app {
+    @apply h-full w-full;
+}
+
 .flex-center {
     @apply flex justify-center items-center;
 }

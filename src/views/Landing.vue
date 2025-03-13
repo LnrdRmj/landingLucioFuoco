@@ -43,9 +43,9 @@ const { stop } = watch(videoSection, () => {
     <div class="flex flex-col relative">
         <Header :halfVideoIsVisible="halfVideoIsVisible" class="fixed top-0 text-white z-20 w-full"
             :routes="headerRoutes" />
-        <VideoSection class="h-screen" @discoverProduct="tmp" ref="videoSection" />
+        <VideoSection class="h-screen shrink-0" @discoverProduct="tmp" ref="videoSection" />
         <CompanyBackground @discoverProduct="tmp" ref="companyBackground" />
-        <WhereToFindUs ref="whereToFindUs" />
+        <WhereToFindUs ref="whereToFindUs" class="shrink-0" />
         <Contacts ref="contacts" />
         <Footer />
     </div>
