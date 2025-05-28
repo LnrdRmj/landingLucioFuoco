@@ -13,10 +13,6 @@ const locations = [
         url: 'https://www.facebook.com/trattoriaAgliAntenati/',
     },
     {
-        address: 'Orsone, Cividale del Friuli (UD)',
-        url: 'https://orsonerelais.com/nuovo-sito-online/',
-    },
-    {
         address: 'Osteria Baldovino, Ipplis (UD)',
         url: 'https://www.thefork.it/ristorante/osteria-baldovino-r833387',
     },
