@@ -29,7 +29,8 @@ const { stop } = watch(videoSection, () => {
     if (videoSection.value == null) return
 
     useIntersectionObserver(videoSection.value.root, ([entry]) => {
-        halfVideoIsVisible.value = entry.intersectionRatio > 0.5
+        if (entry != null)
+            halfVideoIsVisible.value = entry.intersectionRatio > 0.5
     }, {
         threshold: 0.5
     })
