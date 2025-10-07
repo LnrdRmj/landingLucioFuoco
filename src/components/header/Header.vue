@@ -20,7 +20,7 @@ const open = ref(false)
         <header
             class="flex px-10 lg:px-32 justify-between transition-[padding,background-color] backdrop-filter backdrop-blur-md pointer-events-auto"
             :class="[open == true ? 'py-10 bg-black' : 'py-6 bg-black/70', halfVideoIsVisible ? 'lg:py-12 lg:bg-transparent lg:backdrop-blur-0' : 'backdrop-blur-md']">
-            <div class="flex [&>*]:h-10 gap-5">
+            <div class="flex *:h-10 gap-5">
                 <Logo />
                 <div class="flex">
                     <LucioIcon class="mr-2" />
@@ -34,7 +34,7 @@ const open = ref(false)
                         {{ route.title }}
                     </button>
                 </div>
-                <button class="lg:hidden size-10 [&>*]:duration-200 relative pointer-events-auto" @click="open = !open">
+                <button class="lg:hidden size-10 *:duration-200 relative pointer-events-auto" @click="open = !open">
                     <Transition name="fade">
                         <MenuBurgerIcon v-if="!open" class="fill-white absolute size-full top-0" />
                         <TimesIcon v-else class="fill-white" />
@@ -53,9 +53,9 @@ const open = ref(false)
                     flex flex-col 
                     w-full
                     z-10
-                    transition-[opacity,transform] duration-[250ms]" :class="open ? 'opacity-100' : 'opacity-0'">
+                    transition-[opacity,transform] duration-250" :class="open ? 'opacity-100' : 'opacity-0'">
                     <div class="flex flex-center flex-col pb-12 px-8 h-full">
-                        <div class="w-full bg-gray-400 h-[1px]"></div>
+                        <div class="w-full bg-gray-400 h-px"></div>
                         <div class="flex flex-col items-center justify-center h-full text-4xl gap-10 font-app">
                             <button v-for="route of routes" @click="open = false; route.onClick()">
                                 {{ route.title }}

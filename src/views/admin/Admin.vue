@@ -37,7 +37,7 @@ async function downloadEmailCsv() {
 <template>
     <div class="size-full p-10">
         <div class="flex flex-col space-y-5">
-            <button class="bg-blue-500 disabled:bg-blue-300 text-white w-fit py-2 px-4 rounded"
+            <button class="bg-blue-500 disabled:bg-blue-300 text-white w-fit py-2 px-4 rounded-sm"
                 @click="downloadEmailCsv()" :disabled="isDownloadingEmailCsv">
                 Scarica le email
             </button>

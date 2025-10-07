@@ -8,7 +8,7 @@ import MailIcon from '@/components/icons/MailIcon.vue';
 
 <template>
     <footer class="flex flex-col bg-black px-10 pt-10 pb-24">
-        <div class="flex justify-between [&>*]:h-10 gap-5">
+        <div class="flex justify-between *:h-10 gap-5">
             <div class="flex gap-5">
                 <Logo />
                 <div class="flex">

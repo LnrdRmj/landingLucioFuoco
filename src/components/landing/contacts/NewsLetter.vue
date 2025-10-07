@@ -45,16 +45,16 @@ async function registerEmail() {
                 </Transition>
             </div>
         </div>
-        <div class="flex overflow-hidden rounded-md transition-[background-color,_margin,_opacity] duration-500"
+        <div class="flex overflow-hidden rounded-md transition-[background-color,margin,opacity] duration-500"
             :class="[isEmailValid ? 'bg-white' : 'bg-zinc-800', successEmailRegistered ? '-mt-10 opacity-0' : 'mt-7 opacity-100']">
-            <input type="email" placeholder="Inserisci Email" v-model="email" class="h-10 px-2 flex-1 transition-all bg-transparent outline-none 
+            <input type="email" placeholder="Inserisci Email" v-model="email" class="h-10 px-2 flex-1 transition-all bg-transparent outline-hidden 
                     placeholder:transition-colors placeholder-neutral-700 hover:placeholder-white"
                 :disabled="isRegisteringEmail" :class="[isEmailValid ? 'text-black' : 'text-white']" />
             <div class="flex-center w-10">
                 <Transition name="to-from-right">
                     <button v-if="isEmailValid"
                         :disabled="!isEmailValid || isRegisteringEmail || successEmailRegistered" @click="registerEmail"
-                        class="text-white px-3 bg-orange-dark size-full !duration-200">
+                        class="text-white px-3 bg-orange-dark size-full duration-200!">
                         <ArrowIcon class="fill-transparent size-full stroke-white" />
                     </button>
                 </Transition>

@@ -16,7 +16,7 @@ defineExpose({ root })
     <div class="relative" ref="root">
         <div class="size-full flex flex-center z-10 relative text-white">
             <div class="flex flex-col items-center">
-                <div class="flex gap-3 [&>*]:h-14 lg:[&>*]:h-24">
+                <div class="flex gap-3 *:h-14 lg:*:h-24">
                     <LucioIcon />
                     <Logo />
                     <FuocoIcon />
